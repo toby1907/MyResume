@@ -10,6 +10,7 @@ MyResume is a digital resume display app, which essentially is to display my res
 -Jetpack Compose
 -Navigation Component
 -ViewModel
+-Flow
 
 
 -the portfolio would be add as the space was provided
