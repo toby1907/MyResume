@@ -103,6 +103,7 @@ fun Profile(viewModel: ProfileViewModel){
                         Row(horizontalArrangement = Arrangement.Center, verticalAlignment = Alignment.CenterVertically) {
                             Spacer(modifier = Modifier.padding(horizontal = 8.dp))
                             ContactButton()
+
                         }
                     }
 
@@ -310,44 +311,52 @@ fun Experience(modifier: Modifier=Modifier) {
 fun ContactButton(modifier: Modifier=Modifier){
 
     val mUriHandler= LocalUriHandler.current
-   /* val mAnnotatedLinkString = buildAnnotatedString {
-        val mStr = "GitHub Repo"
-val mStartIndex = mStr.indexOf("Github Re")
-        val mEndIndex = mStartIndex+2
-        append(mStr)
-        addStringAnnotation(
-            tag = "URL",
-            annotation = "https://github.com/toby1907",
-            start = mStartIndex,
-            end = mEndIndex
-        )
-    }*/
-    Button(colors = ButtonDefaults.buttonColors(
-        containerColor = Color.DarkGray
-    ),
-        onClick = {  mUriHandler.openUri("https://github.com/toby1907")  },
-        // Uses ButtonDefaults.ContentPadding by default
-        contentPadding = PaddingValues(
-            start = 20.dp,
-            top = 12.dp,
-            end = 20.dp,
-            bottom = 12.dp
-        )
-    ) {
-        // Inner content including an icon and a text label
-        Icon(
-            painter = painterResource(id = R.drawable.github),
-            contentDescription = "Favorite",
-            modifier = Modifier.size(ButtonDefaults.IconSize)
-        )
-        Spacer(Modifier.size(ButtonDefaults.IconSpacing))
-       /* ClickableText(text = mAnnotatedLinkString, onClick ={
-            mAnnotatedLinkString.getStringAnnotations("URL",it,it)
-                .firstOrNull()?.let { stringAnnotation ->
-                    mUriHandler.openUri(stringAnnotation.item)
-                }
-        } )*/
-        Text(text = "GitHub Repo")
+
+    Row(){
+       Button(
+            colors = ButtonDefaults.buttonColors(
+                containerColor = Color.DarkGray
+            ),
+            onClick = { mUriHandler.openUri("https://github.com/toby1907") },
+            // Uses ButtonDefaults.ContentPadding by default
+            contentPadding = PaddingValues(
+                start = 20.dp,
+                top = 12.dp,
+                end = 20.dp,
+                bottom = 12.dp
+            )
+        ) {
+            // Inner content including an icon and a text label
+            Icon(
+                painter = painterResource(id = R.drawable.github),
+                contentDescription = "Favorite",
+                modifier = Modifier.size(ButtonDefaults.IconSize)
+            )
+
+            Text(text = "GitHub Repo")
+        }
+        Spacer(modifier = Modifier.padding(24.dp))
+        OutlinedButton(colors = ButtonDefaults.buttonColors(
+            containerColor = Color.DarkGray
+        ),
+            onClick = {  mUriHandler.openUri("https://www.linkedin.com/in/olaleye-paul-tobi-6abaa411b")  },
+            // Uses ButtonDefaults.ContentPadding by default
+            contentPadding = PaddingValues(
+                start = 20.dp,
+                top = 12.dp,
+                end = 20.dp,
+                bottom = 12.dp
+            )
+        ) {
+            // Inner content including an icon and a text label
+            Icon(
+                painter = painterResource(id = R.drawable.linkedin__2_),
+                contentDescription = "Favorite",
+                modifier = Modifier.size(ButtonDefaults.IconSize)
+            )
+
+            Text(text = "LinkedIn")
+        }
     }
 
 }
