@@ -13,7 +13,7 @@ MyResume is a digital resume display app, which essentially is to display my res
 -Flow
 
 
--the portfolio would be add as the space was provided
+-the portfolio would be added as the space was provided
 
 #link to the APK
 https://drive.google.com/file/d/1SK0JafmHr1y2Frf4GvlU6-9bsVDFTkYD/view?usp=sharing
