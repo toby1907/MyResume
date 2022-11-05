@@ -2,8 +2,9 @@
 �
 Description 
 MyResume is a digital resume display app, which essentially is to display my resume on a mobile device.
--it has a splash screen, About me section, Contact Section etc
--you scaffolding base on slot api for the ui
+-it has a splash screen, About me section, Contact Section etc.
+
+-used scaffolding composables, base on slot api for the ui
 
 #Libraries used
 -Jetpack Compose
